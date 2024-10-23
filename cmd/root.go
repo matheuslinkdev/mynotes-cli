@@ -3,9 +3,9 @@ package cmd
 import "github.com/spf13/cobra"
 
 var rootCmd = &cobra.Command{
-	Use: "mybooknotes",
-	Short: "CLI to write down sentences of books",
-	Long: "My CLI to add and list phrases and citations of books",
+	Use: "mynotes",
+	Short: "CLI to write down book quotes and citations.",
+	Long: "My CLI for adding and listing quotes from books or people.",
 }
 
 func Execute() {
@@ -15,6 +15,9 @@ func Execute() {
 }
 
 func init(){
-	rootCmd.AddCommand(addCmd)
+	rootCmd.AddCommand(addBooknoteCmd)
 	rootCmd.AddCommand(listCmd)
+	rootCmd.AddCommand(addNoteCmd)
+	rootCmd.AddCommand(removeBooknoteCmd)
+    rootCmd.AddCommand(removeNoteCmd)
 }
