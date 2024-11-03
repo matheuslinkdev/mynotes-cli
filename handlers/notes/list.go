@@ -10,7 +10,7 @@ import (
 )
 
 var ListNotes = &cobra.Command{
-	Use:   "listn",
+	Use:   "lsnt",
 	Short: "List notes",
 	Long:  "List all the notes that've been written",
 	Run: func(cmd *cobra.Command, args []string) {
